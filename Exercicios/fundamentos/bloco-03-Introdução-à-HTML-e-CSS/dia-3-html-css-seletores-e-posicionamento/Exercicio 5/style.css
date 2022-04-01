@@ -1,3 +1,9 @@
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: 600;
+}
 li:nth-child(odd) {
     text-transform: uppercase;
 }
