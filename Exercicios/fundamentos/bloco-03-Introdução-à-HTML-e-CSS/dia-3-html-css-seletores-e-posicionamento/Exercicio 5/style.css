@@ -28,3 +28,27 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em{
     font-size: 40px;
     border: solid black;
 }
+#java{
+    background-color: pink;
+}
+.primeiros{
+    background-color: blue;
+}
+#aliado1:hover{
+    background-color: orange;
+}
+#aliado2:hover{
+    background-color: green;
+    color: white;
+}
+#aliado3:hover{
+    background-color: blue;
+    color: white;
+}
+#aliado4:hover{
+    background-color: lightgreen;
+    color: black;
+}
+#aliado5:hover{
+    background-color: green;
+}
