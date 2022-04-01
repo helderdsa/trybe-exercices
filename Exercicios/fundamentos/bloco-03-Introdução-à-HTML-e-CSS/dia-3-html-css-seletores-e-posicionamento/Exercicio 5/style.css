@@ -1,0 +1,24 @@
+li:nth-child(odd) {
+    text-transform: uppercase;
+}
+li:nth-child(even) {
+    color: green;
+}
+li:nth-child(odd) a{
+    text-transform: uppercase;
+}
+li:nth-child(even) a{
+    color: green;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: red;
+}
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em{
+    font-size: 40px;
+    border: solid black;
+}
