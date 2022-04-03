@@ -1,0 +1,22 @@
+div:hover{
+    border: solid 5px orange;
+}
+.div1{
+    background-color: red;
+}
+.div2{
+    background-color: purple;
+}
+.div3{
+    background-color: darkred;
+    padding: 5px;
+}
+.div4{
+    background-color: darkslateblue;
+}
+.div5{
+    background-color: lightskyblue;
+}
+.div1 h3, .div3 h3, .div5 h3{
+    font-style: italic;
+}
