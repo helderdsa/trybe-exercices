@@ -3,3 +3,9 @@ th{
     border: solid 1px lightgray;
     margin: -1;
 }
+article{
+    display: inline-block;
+}
+aside{
+    display: inline-block;
+}
