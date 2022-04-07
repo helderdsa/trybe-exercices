@@ -6,3 +6,7 @@ console.log(menuServices);
 let indexOfPortfolio = menu[2];
 
 console.log(indexOfPortfolio);
+
+menu.push('contato')
+
+console.log(menu);
