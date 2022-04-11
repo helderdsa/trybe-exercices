@@ -1,4 +1,4 @@
-function maior(inteiros){
+function menor(inteiros){
     let maior = 0
     for(i in inteiros){
         if(inteiros[maior] < inteiros[i])
@@ -6,4 +6,4 @@ function maior(inteiros){
     }
     console.log(maior)  
 }
-maior([2, 3, 6, 7, 10, 1])
+menor([2, 3, 6, 7, 10, 1])
