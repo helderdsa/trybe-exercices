@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafo">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafo">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById('page-title').innerText = "Como treinar seu dragão"
+      document.getElementById('subtitle').innerText = "A origem de Soluço e Banguela"
+      let paragrafor = document.getElementsByClassName("paragrafo")
+      paragrafor[0].style.color = "green"
+      let tegs = document.getElementsByTagName('p')
+      tegs[tegs.length-1].style.color = "blue"
+    </script>
+  </body>
+</html>
