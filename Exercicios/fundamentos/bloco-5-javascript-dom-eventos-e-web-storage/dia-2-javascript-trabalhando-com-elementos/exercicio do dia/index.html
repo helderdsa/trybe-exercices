@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let corpo = document.querySelector("body")
+      
+      let title = document.createElement("h1")
+      title.innerHTML = "Exercício 5.2 - JavaScript DOM"
+      corpo.appendChild(title)
+      
+      let mainContent = document.createElement("main")
+      mainContent.className = "main-content"
+      corpo.appendChild(mainContent)
+
+      let centerContent = document.createElement("section")
+      centerContent.className = "center-content"
+      mainContent.appendChild(centerContent)
+
+      let parag = document.createElement("p")
+      parag.innerHTML = "Esse exercicio é estranho, mas estou gostando"
+      centerContent.append(parag)
+
+      let leftContent = document.createElement("section")
+      leftContent.className = "left-content"
+      mainContent.appendChild(leftContent)
+
+      let rightContent = document.createElement("section")
+      rightContent.className = "right-content"
+      mainContent.appendChild(rightContent)
+
+      let leftContentImg = document.createElement("img")
+      leftContentImg.src = "https://picsum.photos/200"
+      leftContentImg.className = "small-image"
+      leftContent.appendChild(leftContentImg)
+
+      let numberList = document.createElement("ul")
+      rightContent.appendChild(numberList)
+
+      for(let i = 1; i <= 10; i++){
+        let number = document.createElement("li")
+        number.innerHTML = i
+        numberList.appendChild(number)
+      }
+      for(let i = 0; i < 3; i++){
+        mainContent.appendChild(document.createElement("h3"))
+      }
+
+      /////////////////////////////////////////////////////////////////////////////////
+
+      title.className = "title"
+
+      mainContent.lastChild.className = "description"
+      mainContent.lastChild.previousSibling.className = "description"
+      mainContent.lastChild.previousSibling.previousSibling.className = "description"
+
+      mainContent.removeChild(leftContent)
+
+      rightContent.style.marginRight = "auto"
+
+      document.querySelector(".center-content").style.backgroundColor = "green"
+
+      for(let i = 0; i < 2; i++){
+        numberList.removeChild(numberList.children[numberList.children.length-1])
+      }
+    </script>
+  </body>
+</html>
