@@ -74,6 +74,8 @@ function criarBTNSexta(textoBTN) {
 let sextasToggle = false
 function destacarSextas(){
     let sextas = document.querySelectorAll(".friday")
+    let diasSextaDez = [ 4, 11, 18, 25 ]
+    let index = 0
     if(sextasToggle == false){
         for(sexta of sextas){
             sexta.style.backgroundColor = "red"
@@ -85,9 +87,28 @@ function destacarSextas(){
         for(sexta of sextas){
             sexta.style.backgroundColor = "#eeeeee"
             sexta.style.color = "#777"
-            sexta.innerHTML = parseInt(sexta.innerHTML)
+            sexta.innerHTML = diasSextaDez[index]
+            index++
             sextasToggle = false
         }
     }
 }
 document.querySelector("#btn-friday").addEventListener("click", destacarSextas)
+
+////////////////////////////////////////////////////////////////////////////////
+
+let dias = document.querySelectorAll(".day")
+function overData(evt){
+    evt.target.style.fontSize = "24px"
+    evt.target.style.color = "#2fc18c"
+}
+
+function leaveData(evt){
+    evt.target.style.fontSize = "20px"
+    evt.target.style.color = "#777"
+}
+
+for(dia of dias){
+    dia.addEventListener("mouseover", overData, false)
+    dia.addEventListener("mouseleave", leaveData, false)
+}
